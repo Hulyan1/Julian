@@ -1,3 +1,13 @@
+<?php 
+    session_start();
+
+    // checks if the  user is login in a device
+    if(!isset($_SESSION['username']) || !isset($_SESSION['email'])){
+        header("location: ../../../../index.php");
+    }
+?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -7,6 +17,7 @@
   <title>Modernize Free</title>
   <link rel="shortcut icon" type="image/png" href="../assets/images/logos/logo.png" />
   <link rel="stylesheet" href="../assets/css/styles.min.css" />
+  <link rel="stylesheet" href="../assets/css/table.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 
@@ -116,40 +127,45 @@
         <div class="container-fluid">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title fw-semibold mb-4">Buttons</h5>
+              
+              <h5 class="card-title fw-semibold mb-4">Products</h5>
+              
               <div class="card">
                 <div class="card-body p-4">
-                  <!-- <button type="button" class="btn btn-primary m-1">Primary</button>
-                  <button type="button" class="btn btn-secondary m-1">Secondary</button>
-                  <button type="button" class="btn btn-success m-1">Success</button>
-                  <button type="button" class="btn btn-danger m-1">Danger</button>
-                  <button type="button" class="btn btn-warning m-1">Warning</button>
-                  <button type="button" class="btn btn-info m-1">Info</button>
-                  <button type="button" class="btn btn-light m-1">Light</button>
-                  <button type="button" class="btn btn-dark m-1">Dark</button>
-                  <button type="button" class="btn btn-link m-1">Link</button> -->
+
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Product</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <!-- <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr> -->
+
+                    </tbody>
+                  </table>
+
                 </div>
               </div>
-              <!-- <h5 class="card-title fw-semibold mb-4">Outline buttons</h5>
-              <div class="card mb-0">
-                <div class="card-body p-4">
-                  <button type="button" class="btn btn-outline-primary m-1">Primary</button>
-                  <button type="button" class="btn btn-outline-secondary m-1">Secondary</button>
-                  <button type="button" class="btn btn-outline-success m-1">Success</button>
-                  <button type="button" class="btn btn-outline-danger m-1">Danger</button>
-                  <button type="button" class="btn btn-outline-warning m-1">Warning</button>
-                  <button type="button" class="btn btn-outline-info m-1">Info</button>
-                  <button type="button" class="btn btn-outline-light m-1">Light</button>
-                  <button type="button" class="btn btn-outline-dark m-1">Dark</button>
-                  <button type="button" class="btn btn-outline-link m-1">Link</button>
-                </div>
-              </div> -->
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+
   <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
   <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/sidebarmenu.js"></script>

@@ -1,3 +1,13 @@
+<?php 
+    session_start();
+
+    // checks if the  user is login in a device
+    if(!isset($_SESSION['username']) || !isset($_SESSION['email'])){
+        header("location: ../../../../index.php");
+    }
+?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -40,7 +50,7 @@
                     <input type="password" name="password" class="form-control" id="exampleInputPassword1">
                   </div>
 
-                  <a href="./index.html" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Sign Up</a>
+                  <button class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2" value="submit"> Sign up </button>
 
                   <div class="d-flex align-items-center justify-content-center">
                     <a class="text-primary fw-bold ms-2" href="index.php">Cancel</a>

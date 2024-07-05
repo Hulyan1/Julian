@@ -1,3 +1,13 @@
+<?php 
+    session_start();
+
+    // checks if the  user is login in a device
+    if(!isset($_SESSION['username']) || !isset($_SESSION['email'])){
+        header("location: ../../../../index.php");
+    }
+?>
+
+
 <!doctype html>
 <html lang="en">
 

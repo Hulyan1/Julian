@@ -14,117 +14,102 @@
   <!--  Body Wrapper -->
   <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
     data-sidebar-position="fixed" data-header-position="fixed">
+
     <!-- Sidebar Start -->
     <aside class="left-sidebar">
       <!-- Sidebar scroll-->
       <div>
+
+      <!-- logo -->
         <div class="brand-logo d-flex align-items-center justify-content-between">
-          <a href="./index.html" class="text-nowrap logo-img">
+          <a href="index.php" class="text-nowrap logo-img">
             <img src="../assets/images/logos/logo.png" width="150" alt="" />
           </a>
-          <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
-            <i class="ti ti-x fs-8"></i>
-          </div>
         </div>
+
+
         <!-- Sidebar navigation-->
         <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
           <ul id="sidebarnav">
+
+            <!-- HEADER - HOME -->
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
               <span class="hide-menu">Home</span>
             </li>
+
+            <!-- DASHBOARD -->
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./index.html" aria-expanded="false">
+              <a class="sidebar-link" href="index.php" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
                 <span class="hide-menu">Dashboard</span>
               </a>
             </li>
+
+            <!-- space between dashboard and the bottom menus -->
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <!-- <span class="hide-menu">UI COMPONENTS</span> -->
             </li>
+
+            <!-- PRODUCT  -->
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-product.html" aria-expanded="false">
+              <a class="sidebar-link" href="ui-product.php" aria-expanded="false">
                 <span>
                   <i class="fa-solid fa-store"></i>
                 </span>
                 <span class="hide-menu">Product</span>
               </a>
             </li>
+
+            <!-- SAVE PHOTO -->
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-savep.html" aria-expanded="false">
+              <a class="sidebar-link" href="ui-savep.php" aria-expanded="false">
                 <span>
                   <i class="fa-solid fa-image"></i>
                 </span>
                 <span class="hide-menu">Save Photo</span>
               </a>
             </li>
+
+            <!-- CUSTOMIZE -->
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-customize.html" aria-expanded="false">
+              <a class="sidebar-link" href="ui-customize.php" aria-expanded="false">
                 <span>
                   <i class="ti ti-cards"></i>
                 </span>
                 <span class="hide-menu">Customize</span>
               </a>
             </li>
-            <!-- <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-forms.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-file-description"></i>
-                </span>
-                <span class="hide-menu">Forms</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-typography.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-typography"></i>
-                </span>
-                <span class="hide-menu">Typography</span>
-              </a>
-            </li> -->
+
+            
+            <!-- HEADING - dash line -->
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">AUTH</span>
+              <span class="hide-menu">---------------------------</span>
             </li>
+
+            <!-- Log out button -->
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
+              <a class="sidebar-link" href="controls/logout.php" aria-expanded="false">
                 <span>
                   <i class="ti ti-login"></i>
                 </span>
-                <span class="hide-menu">Login</span>
+                <span class="hide-menu">Logout</span>
               </a>
             </li>
+
+
+            <!-- Register new admin button -->
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./authentication-register.html" aria-expanded="false">
+              <a class="sidebar-link" href="authentication-register.php" aria-expanded="false">
                 <span>
                   <i class="ti ti-user-plus"></i>
                 </span>
                 <span class="hide-menu">Register</span>
               </a>
             </li>
-            <!-- <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">EXTRA</span>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./icon-tabler.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-mood-happy"></i>
-                </span>
-                <span class="hide-menu">Icons</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./sample-page.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-aperture"></i>
-                </span>
-                <span class="hide-menu">Sample Page</span>
-              </a>
-            </li> -->
           </ul>
         </nav>
         <!-- End Sidebar navigation -->
@@ -132,6 +117,10 @@
       <!-- End Sidebar scroll-->
     </aside>
     <!--  Sidebar End -->
+
+
+
+
     <!--  Main wrapper -->
     <div class="body-wrapper">
       <!--  Header Start -->
@@ -143,12 +132,7 @@
                 <i class="ti ti-menu-2"></i>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link nav-icon-hover" href="javascript:void(0)">
-                <i class="ti ti-bell-ringing"></i>
-                <div class="notification bg-primary rounded-circle"></div>
-              </a>
-            </li>
+
           </ul>
           <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">

@@ -24,7 +24,7 @@ session_start();
                 
                 $_SESSION['email'] = $adminEmail;
                 $_SESSION['username'] = $adminUser;
-                header("Location: ../adminhub/index.php");
+                header("Location: ../AdminSide/src/php/index.php");
             
                 exit();
             }else{

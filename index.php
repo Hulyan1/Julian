@@ -3,7 +3,7 @@
 
     // checks if the  user is login in a device
     if(isset($_SESSION['username']) || isset($_SESSION['email'])){
-        header("Location: PHP/adminhub/index.php");
+        header("location: PHP/AdminSide/src/php/index.php");
     }
 ?>
 
@@ -43,9 +43,8 @@
                     </li>
 
                     <div class="logn">
-                        <a href="/PHP/view/cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
-                        <a href=""><i class="fa-solid fa-user"></i></a>
-                        <a href="PHP/view/signup_login.php" ><i class="fa-solid fa-user-plus"></i><a>
+                        <a href="PHP/view/cart.php"><i class="fa-solid fa-cart-shopping" style="color: white;"></i></a>
+                        <a href="PHP/view/signup_login.php" ><i class="fa-solid fa-user-plus"style="color: white;"></i><a>
                     </div>
                 </ul>
             </nav>  
@@ -54,7 +53,7 @@
                 <h1>Immerse in Sound,</h1>
                 <h1>Elevate Your Experience</h1>
                 <div class="t-button">
-                    <a href="ordering.html">Buy Now</a>
+                    <a href="ordering.php">Buy Now</a>
                 </div>
             </div>
         </header>

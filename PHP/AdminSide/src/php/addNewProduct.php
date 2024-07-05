@@ -1,18 +1,10 @@
 <?php 
     session_start();
-
+    include "controls/addProducts.php";
+    // checks if the  user is login in a device
     if(!isset($_SESSION['username']) || !isset($_SESSION['email'])){
-      header("location: ../../../../index.php");
+        header("location: ../../../../index.php");
     }
-
-    include "../../../model/connection.php";
-
-    // Prepare and execute SQL
-    $stmt = $conn->prepare("SELECT * FROM products");
-    $stmt->execute();
-
-    // Fetch all products
-    $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 
@@ -123,11 +115,8 @@
       <!-- End Sidebar scroll-->
     </aside>
     <!--  Sidebar End -->
-
-
-
-    <!--  Main wrapper -->
-    <div class="body-wrapper">
+ <!--  Main wrapper -->
+ <div class="body-wrapper">
       <!--  Header Start -->
      
       <!--  Header End -->
@@ -135,38 +124,29 @@
         <div class="container-fluid">
           <div class="card">
             <div class="card-body">
-              <a href="addNewProduct.php"><button class="btn btn-primary w-30 py-8 fs-4 mb-4 rounded-2" value="submit"> Add New Product </button></a>
-              <h5 class="card-title fw-semibold mb-4">Products </h5>          
-
+              <a href="ui-product.php"><button class="btn btn-primary w-20 py-8 fs-4 mb-4 rounded-2" value="submit"> Back </button></a>
+              <h5 class="card-title fw-semibold mb-4">Add Product </h5>          
               <div class="card">
                 <div class="card-body p-4">
-              
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Product</th>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Category</th>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <?php foreach ($products as $product): ?>
-                        <tr>
-                            <td><img class="prodimg" src="controls/uploads/<?php echo htmlspecialchars($product['product']); ?>" width="100" alt="Product"></td>
-                            <td><?php echo htmlspecialchars($product['name']); ?></td>
-                            <td><?php echo htmlspecialchars($product['price']); ?></td>
-                            <td><?php echo htmlspecialchars($product['category']); ?></td>
-                            <td>
-                              <a class="btn btn-secondary w-30 py-10 fs-4 mb-4 rounded-2" href="product_Sett/edit_product.php?id=<?php echo $product['product_id']; ?>">Edit</a>
-                              <a class="btn w-30 py-10 fs-4 mb-4 rounded-2" style="color: red;" href="product_Sett/delete_product.php?id=<?php echo $product['product_id']; ?>" onclick="return confirm('Are you sure?')">Remove</a>
-                            </td>
-                        </tr>
-                      <?php endforeach; ?>  
+                    
+                
+                    <form action="controls/addProducts.php" method="post" enctype="multipart/form-data">
+                        <label for="image">Product Image:</label>
+                        <input type="file" name="image" id="image" required><br><br>
+                        <label for="name">Product Name:</label>
+                        <input type="text" name="name" id="name" required><br><br>
 
-                    </tbody>
-                  </table>
+                        <label for="price">Price:</label>
+                        <input type="number" step="0.01" name="price" id="price" required><br><br>
+
+                        <label for="category">Category:</label>
+                        <select name="category" id="category" required>
+                            <option value="normal">Normal</option>
+                            <option value="gaming">Gaming</option>
+                        </select><br><br>
+
+                        <button type="submit" name="submit" class="btn btn-primary w-10 py-8 fs-2 mb-2 rounded-2">Add Product</button>
+                    </form>
 
                 </div>
               </div>
@@ -176,13 +156,11 @@
       </div>
     </div>
   </div>
-
-
-  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
-  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/js/sidebarmenu.js"></script>
-  <script src="../assets/js/app.min.js"></script>
-  <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+<script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/sidebarmenu.js"></script>
+<script src="../assets/js/app.min.js"></script>
+<script src="../assets/libs/simplebar/dist/simplebar.js"></script>
 </body>
 
 </html>

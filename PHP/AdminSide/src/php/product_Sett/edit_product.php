@@ -1,18 +1,24 @@
-<?php 
-    session_start();
+<?php
+include "../../../../model/connection.php";
 
-    if(!isset($_SESSION['username']) || !isset($_SESSION['email'])){
-      header("location: ../../../../index.php");
-    }
+if (isset($_POST['submit'])) {
+    $stmt = $conn->prepare("UPDATE products SET name = :name, price = :price, category = :category WHERE product_id = :id");
+    $stmt->bindParam(':name', $_POST['name']);
+    $stmt->bindParam(':price', $_POST['price']);
+    $stmt->bindParam(':category', $_POST['category']);
+    $stmt->bindParam(':id', $_POST['id']);
 
-    include "../../../model/connection.php";
-
-    // Prepare and execute SQL
-    $stmt = $conn->prepare("SELECT * FROM products");
+    $conn = null;
+} else {
+    $stmt = $conn->prepare("SELECT * FROM products WHERE product_id = :id");
+    $stmt->bindParam(':id', $_GET['id']);
     $stmt->execute();
+    $GLOBALS['product'] = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    // Fetch all products
-    $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    $conn = null;
+}
+
 ?>
 
 
@@ -24,8 +30,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Modernize Free</title>
   <link rel="shortcut icon" type="image/png" href="../assets/images/logos/logo.png" />
-  <link rel="stylesheet" href="../assets/css/styles.min.css" />
-  <link rel="stylesheet" href="../assets/css/table.css" />
+  <link rel="stylesheet" href="../../assets/css/styles.min.css" />
+  <link rel="stylesheet" href="../../assets/css/table.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 
@@ -125,8 +131,7 @@
     <!--  Sidebar End -->
 
 
-
-    <!--  Main wrapper -->
+ <!--  Main wrapper -->
     <div class="body-wrapper">
       <!--  Header Start -->
      
@@ -135,38 +140,31 @@
         <div class="container-fluid">
           <div class="card">
             <div class="card-body">
-              <a href="addNewProduct.php"><button class="btn btn-primary w-30 py-8 fs-4 mb-4 rounded-2" value="submit"> Add New Product </button></a>
-              <h5 class="card-title fw-semibold mb-4">Products </h5>          
+              <a href="../ui-product.php"><button class="btn btn-primary w-30 py-8 fs-4 mb-4 rounded-2" value="submit"> Cancel Edit </button></a>
+              <h5 class="card-title fw-semibold mb-4">Edit this Product </h5>          
 
               <div class="card">
                 <div class="card-body p-4">
-              
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Product</th>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Category</th>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <?php foreach ($products as $product): ?>
-                        <tr>
-                            <td><img class="prodimg" src="controls/uploads/<?php echo htmlspecialchars($product['product']); ?>" width="100" alt="Product"></td>
-                            <td><?php echo htmlspecialchars($product['name']); ?></td>
-                            <td><?php echo htmlspecialchars($product['price']); ?></td>
-                            <td><?php echo htmlspecialchars($product['category']); ?></td>
-                            <td>
-                              <a class="btn btn-secondary w-30 py-10 fs-4 mb-4 rounded-2" href="product_Sett/edit_product.php?id=<?php echo $product['product_id']; ?>">Edit</a>
-                              <a class="btn w-30 py-10 fs-4 mb-4 rounded-2" style="color: red;" href="product_Sett/delete_product.php?id=<?php echo $product['product_id']; ?>" onclick="return confirm('Are you sure?')">Remove</a>
-                            </td>
-                        </tr>
-                      <?php endforeach; ?>  
 
-                    </tbody>
-                  </table>
+
+
+                    <form action="edit_product.php" method="post">
+                        <input type="hidden" name="id" value="<?php echo htmlspecialchars($product['product_id']); ?>">
+
+                        <label for="name">Product Name:</label>
+                        <input class="w-30 py-10 fs-4 mb-4 rounded-2" type="text" name="name" id="name" value="<?php echo htmlspecialchars($product['name']); ?>" required><br><br>
+
+                        <label for="price">Price:</label>
+                        <input  class="w-30 py-10 fs-4 mb-4 rounded-2" name="category" type="number" step="0.01" name="price" id="price" value="<?php echo htmlspecialchars($product['price']); ?>" required><br><br>
+
+                        <label for="category">Category:</label>
+                        <select  class="w-30 py-8 fs-4 mb-4 rounded-2" name="category" id="category" required>
+                            <option value="gaming" <?php if ($product['category'] == 'gaming') echo 'selected'; ?>>Gaming</option>
+                            <option value="normal" <?php if ($product['category'] == 'normal') echo 'selected'; ?>>Normal</option>
+                        </select><br><br>
+
+                        <button type="submit" class="btn btn-primary w-30 py-8 fs-4 mb-4 rounded-2" name="submit">Update Product</button>
+                    </form>
 
                 </div>
               </div>
@@ -178,11 +176,11 @@
   </div>
 
 
-  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
-  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/js/sidebarmenu.js"></script>
-  <script src="../assets/js/app.min.js"></script>
-  <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+  <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="../../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/sidebarmenu.js"></script>
+  <script src="../../assets/js/app.min.js"></script>
+  <script src="../../assets/libs/simplebar/dist/simplebar.js"></script>
 </body>
 
 </html>

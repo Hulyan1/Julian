@@ -27,12 +27,10 @@ create table user_accounts (
     
 -- creates large file storage table
 create table products (
-    products_id int auto_increment primary key,
-    product_name varchar(255) not null,
-    product_price int not null,
-    product_image LONGBLOB not null,
-    size bigint not null,
-    type varchar(50) not null,
-    date_added timestamp default current_timestamp
+    product_id int auto_increment primary key,
+    product varchar(255) not null,
+    name varchar(255) not null,
+    price decimal(10,2) not null,
+    category varchar(255) not null
 );
 

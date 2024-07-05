@@ -43,6 +43,8 @@
                     </li>
 
                     <div class="logn">
+                        <a href="/PHP/view/cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href=""><i class="fa-solid fa-user"></i></a>
                         <a href="PHP/view/signup_login.php" ><i class="fa-solid fa-user-plus"></i><a>
                     </div>
                 </ul>
@@ -71,7 +73,7 @@
                 <br>
                 <a href="#">Learn More</a>
             </div>
-        </div>h
+        </div>
 
         
         <div class="product">
@@ -139,15 +141,15 @@
                 <div class="square">
                     <div class="group">
                         <div class="user">
-                            <img src="/IMG/user.png" alt="">
+                            <img src="IMG/user.png" alt="">
                             <span>⭐⭐⭐⭐⭐</span>
                         </div>
                         <div class="user">
-                            <img src="/IMG/user.png" alt="">
+                            <img src="IMG/user.png" alt="">
                             <span>⭐⭐⭐⭐⭐</span>
                         </div>
                         <div class="user">
-                            <img src="/IMG/user.png" alt="">
+                            <img src="IMG/user.png" alt="">
                             <span>⭐⭐⭐⭐⭐</span>
                         </div>
                     </div>

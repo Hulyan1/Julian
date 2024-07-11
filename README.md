@@ -1,5 +1,5 @@
 If shit goes wrong after you download or clone and run this project, then you need to configure some settings:
-  - go to .env file and find the app.baseURL = 'http://localhost:8080/Julian-Capstone-Project/public/' and remove the :8080 in localhost or copy and replace the link inside the app.baseURL with this link https://localhost/Julian-Capstone-Project/public/
+  - go to .env file and find the app.baseURL = 'http://localhost:8080/Julian-Capstone-Project/public/' and remove the :8080 in localhost or copy and replace the link inside the app.baseURL with this link http://localhost/Julian-Capstone-Project/public/
  - after changing then rerun again
 
 

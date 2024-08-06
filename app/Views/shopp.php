@@ -18,45 +18,45 @@
             <h1>Elevate your Experience</h1>
         </div>
 
-        <nav>
-            <div class="logo">
-                <a href="../index.php">
-                    <img src="../img/301117165_464244785717653_8213835756832948193_n-removebg-preview.png" alt="">
-                </a>
-            </div>
-
-            <ul class="links">
-                <li>
-                    <a href="../index.php">Home</a>
-                </li>
-
-                <li>
-                    <a href="../views/library.php">Gear Library</a>    
-                </li>
-
-                <li>
-                    <a href="../views/comm.php">IEM Community</a>            
-                </li>
-
-                <li>
-                    <a href="">Customize</a> 
-                </li>
-
-                <li>
-                    <a class="shop" href="../views/shop.php">Shop</a> 
-                </li>
-                
-                <div class="logn">
-                    <a href=""><i class="fa-solid fa-user-plus"></i></a>
+        <nav>   
+                <div class="logo">
+                    <a href="./index.php">
+                        <img src="./img/301117165_464244785717653_8213835756832948193_n-removebg-preview.png" alt="">
+                    </a>
                 </div>
-            </ul>
-        </nav>
+
+                <ul class="links">
+                    <li>
+                        <a href="<?= base_url("/") ?>">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="<?= base_url("/library") ?>">Gear Library</a>    
+                    </li>
+
+                    <li>
+                        <a href="<?= base_url("/community") ?>">IEM Community</a>            
+                    </li>
+
+                    <li>
+                        <a href="<?= base_url("/customize") ?>">Customize</a> 
+                    </li>
+
+                    <li>
+                        <a class="shop" href="<?= base_url("/shop") ?>">Shop</a> 
+                    </li>
+
+                    <div class="logn">
+                        <a href="<?= base_url("/account") ?>"><i class="fa-solid fa-user-plus"></i></a>
+                    </div>
+                </ul>
+            </nav>
     </header>
     
     <div class="shop">
         <div class="shop-title">
             <h2>Shop</h2>
-            <a href="../views/cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="../views/cart.php <?= base_url("/shop") ?>"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
 
 
@@ -204,30 +204,30 @@
 
     <div class="line"></div>
         
-        <footer>
+    <footer>
                 <div class="footer-logo">
                     <h2>INM Audio</h2>
                 </div>
                 
                     <ul class="link-a">
                         <li>
-                            <a href="./index.php">Home</a>
+                            <a href="<?= base_url("/") ?>">Home</a>
                         </li>
 
                         <li>
-                            <a href="./views/library.php">Gear Library</a>
+                            <a href=" <?= base_url("/library") ?>">Gear Library</a>
                         </li>
 
                         <li>
-                            <a href="./views/community.php">IEM Community</a>
+                            <a href="<?= base_url("/community") ?>">IEM Community</a>
                         </li>
 
                         <li>
-                            <a href="">Customize</a>
+                            <a href="<?= base_url("/customize") ?>">Customize</a>
                         </li>
 
                         <li>
-                            <a href="../views/shop.php">Shop</a>
+                            <a href=" <?= base_url("/shopp") ?>">Shop</a>
                         </li>   
                     </ul>
                 

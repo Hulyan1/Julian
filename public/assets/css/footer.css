@@ -1,0 +1,45 @@
+footer{
+    
+
+    h2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 40px;
+        font-size: 2em;
+        font-family: Montserrat;
+        font-weight: 300;
+        letter-spacing: .30em;
+    }
+    .link-a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        /* padding-top: 10px; */
+
+        li{
+            list-style: none;
+
+            a{
+                text-decoration: none;
+                color: #000;
+                padding: 10px;
+                font-family: Montserrat;
+                font-weight: 300;
+                font-size: 1rem;
+            }
+        }
+    }
+    .media{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+        a{
+            color: #000;
+            font-size: 2rem;
+        }
+    }
+}

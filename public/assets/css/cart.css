@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.cart{
+
+
+    .cart-title{
+
+        h2{
+            padding-top: 70px;
+            padding-left: 90px;
+            font-family: Montserrat;
+            font-weight: 300;
+            font-size: 2em;
+            letter-spacing: 0.30em;
+            margin-bottom: 40px;
+        }
+    }
+    .cart-container{
+
+        .cart-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            border: 1px solid #000;
+            width: 90%;
+            margin: auto;
+            
+            .header-product{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;  
+                padding: 25px;
+                width: 200px;
+                /* padding-left: -90px; */
+                
+                h4{
+                    font-family: Montserrat;
+                    font-size: 1em;
+                    font-weight: 300;
+                    margin-left: 10px;
+                }
+            }
+            .cart-others{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 650px;
+                gap: 55px;
+                padding: 30px;
+
+                h3{
+                    font-family: Montserrat;
+                    font-size: 1em;
+                    font-weight: 300;
+                }
+            }
+        }
+        .cart-body{
+            margin-top: 30px;
+
+            
+            .cart-product{
+                width: 90%;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: 40px;
+                margin: auto;
+                border: 1px solid #000;
+
+                input{
+                    margin-left: 25px;
+                    padding: 0;
+                }
+                .bobo{
+                    margin-left: 10px;
+                    margin-top: 20px;
+                    display: flex;
+                    width: 380px;
+                    gap: 20px;
+                }
+
+                img{
+                    width: 100px;
+                    padding: 0;
+                }
+                p{
+                    font-family: Montserrat;
+                    font-size: 1em;
+                    display: flex;
+                    align-items: center;
+                    font-weight: 200;
+                }
+                
+                .category{
+                    /* padding-right: 10px; */
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-left: 10px;
+                    gap: 95px;
+                    /* border: 1px solid #000;   */
+
+                    .quantity{
+    
+                        input{
+                            width: 100px;
+                        }
+    
+                    }
+                        .actions{
+    
+                            button{
+                                border: none;
+                                background-color: white;
+                            }
+                        }
+                }
+            }
+        }
+    }
+}

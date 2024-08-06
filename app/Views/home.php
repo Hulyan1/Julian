@@ -1,162 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<?= base_url("assets/css/style.css") ?>">
+    <link rel="stylesheet" href="<?= base_url("assets/css/navbar.css") ?>">
+    <link rel="stylesheet" href="<?= base_url("assets/css/footer.css") ?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script defer src="<?= base_url("assets/js/script.js") ?>"></script>
+    <title>INM Audio</title>
+</head>
 
-        <link rel="stylesheet" href="<?= base_url('assets/css/navbar.css')?>">
-        <link rel="stylesheet" href="<?= base_url('assets/css/landingp.css')?>">
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-        <title>INM AUDIO</title>
-
-        <style>
-            header{
-                height: 95vh;
-                background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url("<?= base_url('assets/images/landing.webp')?>");
-                background-size: cover;
-                background-position: bottom;
-                position: relative;
-            }   
-        </style>
-    </head>
     <body>
-        <header style="background-color: url('../assets/images/1.jpg');">
+        <header>
+            <div class="header-text">
+                <h2>Your Music, Your World, Unplugged.</h2>
+                <h1>Elevate your Experience</h1>
+            </div>
+
             <nav>
                 <div class="logo">
-                    <a href="<?= base_url('/') ?>">
-                        <img src="<?= base_url('assets/images/logo.png') ?>" alt="INM_AUDIO">
+                    <a href="./index.php">
+                        <img src="./img/301117165_464244785717653_8213835756832948193_n-removebg-preview.png" alt="">
                     </a>
                 </div>
+
                 <ul class="links">
                     <li>
-                        <a href="<?= base_url('/') ?>">Home</a>
+                        <a href="<?= base_url("/") ?>">Home</a>
                     </li>
 
                     <li>
-                        <a href="<?= base_url('/gearlibrary') ?>">Gear Library</a>
+                        <a href="<?= base_url("/library") ?>">Gear Library</a>    
                     </li>
+
                     <li>
-                        <a href="<?= base_url('/community') ?>">EIM Community</a>
+                        <a href="<?= base_url("/comm") ?>">IEM Community</a>            
                     </li>
+
                     <li>
-                        <a href="<?= base_url('/customize') ?>">Customize</a>
+                        <a href="<?= base_url("/customize") ?>">Customize</a> 
                     </li>
+
                     <li>
-                        <a href="<?= base_url('/shop') ?>">Shop</a>
+                        <a class="shop" href="<?= base_url("/shopp") ?>">Shop</a> 
                     </li>
 
                     <div class="logn">
-                        <a href="<?= base_url('/cart') ?>"><i class="fa-solid fa-cart-shopping" style="color: white;"></i></a>
-                        <a href="<?= base_url('/signup_login') ?>" ><i class="fa-solid fa-user-plus"style="color: white;"></i><a>
+                        <a href="<?= base_url("/signup_login") ?>"><i class="fa-solid fa-user-plus"></i></a>
                     </div>
                 </ul>
-            </nav>  
-
-            <div class="text">
-                <h1>Immerse in Sound,</h1>
-                <h1>Elevate Your Experience</h1>
-                <div class="t-button">
-                    <a href="<?= base_url('ordering') ?>">Buy Now</a>
-                </div>
-            </div>
+            </nav>
         </header>
 
-        <div class="aboutt">
-            <img src="<?= base_url('assets/images/aabout1.png') ?>" alt="">
-
-            <div class="t_about">
-                <h3>
-                    What is?
-                </h3>
-                <h3>
-                    EIM AUDIOPHILE
-                </h3> <br>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita quis soluta labore dicta, ipsam sit incidunt deserunt earum. Optio iusto quaerat illum ratione temporibus aliquid dolor labore voluptas deleniti, adipisci praesentium magni vel! Illum, porro ducimus vel numquam odit ad at magni quod culpa, dignissimos quia reiciendis distinctio, harum unde saepe temporibus a ut minus optio tempore beatae sint. Cupiditate neque illo magnam ullam. Iure velit pariatur tenetur inventore unde eius, fuga ut. Qui cumque dicta iure aliquid corporis. Qui voluptas aliquam quis tenetur quo ipsam vero obcaecati praesentium eveniet cum nisi beatae eligendi quod necessitatibus blanditiis iusto, possimus ipsa.</p>
-                <br>
-                <a href="<?= base_url('') ?>">Learn More</a>
-            </div>
-        </div>
-
-        
-        <div class="product">
-            <div>
-                <h1>OUR</h1>
-                <h1>PRODUCT</h1>
-            </div>
-            <div class="group">
-                <a href="<?= base_url('shop') ?>">
-                    <div class="img-block">
-                        <img src="<?= base_url('assets/images/p1.png') ?>" alt="">
-                        <p>Dark</p>
+        <div class="container">
+            <div class="about">
+                <div class="what-iem">
+                    <h3>What is IEM?</h3>
+                </div>
+                <div class="about-page">
+                    <img src="<?= base_url("assets/img/about.jpg") ?>" alt="">
+                    <div class="about-text">
+                        <h4>In Ear Monitor</h4>
+                        <p>In-ear aspect aside, it's worth noting the term 'monitors', i.e. something designed to keep track of, observe or record a given thing – in this case, music. That leads us to the provenance of IEMs which, rather than being conceived explicitly as an item for the mass market of hungry audio consumers, were in fact designed to be used for musicians and artists during recordings or live performances. Instead of relying on on-stage monitor speakers to hear other aspects of a track, you could simply pipe sound directly into your ears to keep you in the sonic loop while on-stage or in a recording studio.</p>
+                        <a href="">Learn More</a>
                     </div>
-                </a>
-
-                <a href="shop.html">
-                    <div class="img-block">
-                        <img src="<?= base_url('assets/images/p2.png') ?>" alt="">
-                        <p>Dark</p>
-                    </div>
-                </a>
-
-                <a href="shop.html">
-                    <div class="img-block">
-                        <img src="<?= base_url('assets/images/p3.png') ?>" alt="">
-                        <p>Dark</p>
-                    </div>
-                </a>
+                </div>
             </div>
-        </div>
-
-        <div class="best">
-            <div>
-                <h1>MOST ENGAGING EIM WORLDWIDE</h1>
+        </div>    
+    
+        <div class="line"></div>
+            <div class="product">
+                <h2>Our Product</h2>
+                <div class="card">
+                    <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+                        <img class="image" src=" <?= base_url("assets/img/inm1.jpg") ?>" draggable="false" />
+                        <img class="image" src=" <?= base_url("assets/img/inm2.jpg") ?>" draggable="false" />
+                        <img class="image" src=" <?= base_url("assets/img/inm3.jpg") ?>" draggable="false" />
+                        <img class="image" src=" <?= base_url("assets/img/pearl.jpg") ?>" draggable="false" />
+                        <img class="image" src=" <?= base_url("assets/img/google-dino.jpg") ?>" draggable="false" />
+                        <img class="image" src="<?= base_url("assets/img/qdc.jpg") ?>" draggable="false" />
+                    </div>
+                </div>
             </div>
 
-            <div class="b_selling group">
-                <div class="img-block">
-                    <img src="<?= base_url('assets/images/p4.png') ?>" alt="">
-                    <h5>SOARING</h5>
-                    <h4>LYNX</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo asperiores ut optio id quisquam explicabo.</p>
+        <div class="line1"></div>
+
+        <div class="best-container">
+            <div class="best-title">
+                <h2>INM Favorite Gear Created</h2>
+            </div>
+            <div class="card-container">
+                <div class="best-card">
+                    <img src="<?= base_url("assets/img/couple.jpg") ?>" alt="">
+                    <div class="card-content">
+                        <div class="meta">Created <br> June 29, 2022 • 1 min</div>
+                        <h1>ES X WW</h1>
+                        <p>Your Sound, Your Style: Custom IEM Earphones for a Perfect Fit <br> and Unmatched Audio Quality.</p>
+                        <!-- <div class="stats">
+                            <div class="line">
+                                <span>0 views • 0 comments</span>
+                                <span class="heart">❤️</span>
+                            </div>
+                        </div> -->
+                    </div>
                 </div>
 
-                <div class="img-block">
-                    <img src="<?= base_url('assets/images/p5.png') ?>" alt="">
-                    <h5>MUMMY</h5>
-                    <h4>AUTARKY</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo asperiores ut optio id quisquam explicabo.</p>
+                <div class="best-card">
+                    <img src=" <?= base_url("assets/img/couple.jpg") ?>" alt="">
+                    <div class="card-content">
+                        <div class="meta">Created <br> June 29, 2022 • 1 min</div>
+                        <h1>ES X WW</h1>
+                        <p>Your Sound, Your Style: Custom IEM Earphones for a Perfect Fit <br> and Unmatched Audio Quality.</p>
+                        <!-- <div class="stats">
+                            <div class="line">
+                                <span>0 views • 0 comments</span>
+                                <span class="heart">❤️</span>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
 
+                <div class="best-card">
+                    <img src="<?= base_url("assets/img/couple.jpg") ?>" alt="">
+                    <div class="card-content">
+                        <div class="meta">Created <br> June 29, 2022 • 1 min</div>
+                        <h1>ES X WW</h1>
+                        <p>Your Sound, Your Style: Custom IEM Earphones for a Perfect Fit <br> and Unmatched Audio Quality.</p>
+                        <!-- <div class="stats">
+                            <div class="line">
+                                <span>0 views • 0 comments</span>
+                                <span class="heart">❤️</span>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="best-card">
+                    <img src="<?= base_url("assets/img/couple.jpg") ?>" alt="">
+                    <div class="card-content">
+                    <div class="meta">Created <br> June 29, 2022 • 1 min</div>
+                        <h1>ES X WW</h1>
+                        <p>Your Sound, Your Style: Custom IEM Earphones for a Perfect Fit <br> and Unmatched Audio Quality.</p>
+                        <!-- <div class="stats">
+                            <div class="line">
+                                <span>0 views • 0 comments</span>
+                                <span class="heart">❤️</span>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div> 
+        </div>
+            <div class="line"></div>
+
+            <footer>
+                <div class="footer-logo">
+                    <h2>INM Audio</h2>
                 </div>
                 
-                <div class="img-block">
-                    <img src="<?= base_url('assets/images/p6.png') ?>" alt="">
-                    <h5>RUBY</h5>
-                    <h4>WINE</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo asperiores ut optio id quisquam explicabo.</p>
+                    <ul class="link-a">
+                        <li>
+                            <a href="<?= base_url("/") ?>">Home</a>
+                        </li>
+
+                        <li>
+                            <a href=" <?= base_url("/library") ?>">Gear Library</a>
+                        </li>
+
+                        <li>
+                            <a href="<?= base_url("/community") ?>">IEM Community</a>
+                        </li>
+
+                        <li>
+                            <a href="<?= base_url("/customize") ?>">Customize</a>
+                        </li>
+
+                        <li>
+                            <a href=" <?= base_url("/shopp") ?>">Shop</a>
+                        </li>   
+                    </ul>
+                
+                <div class="media">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
                 </div>
-            </div>
-        </div>
-        <br><br>
-        <div class="famous">
-            <h1>FAMOUS GEAR CREATOR</h2>
-                <br><br>
-                <div class="square">
-                    <div class="group">
-                        <div class="user">
-                            <img src="<?= base_url('assets/images/user.png') ?>" alt="">
-                            <span>⭐⭐⭐⭐⭐</span>
-                        </div>
-                        <div class="user">
-                            <img src="<?= base_url('assets/images/user.png') ?>" alt="">
-                            <span>⭐⭐⭐⭐⭐</span>
-                        </div>
-                        <div class="user">
-                            <img src="<?= base_url('assets/images/user.png') ?>" alt="">
-                            <span>⭐⭐⭐⭐⭐</span>
-                        </div>
-                    </div>
-                </div>
-        </div>
+                
+            </footer>
     </body>
+    
 </html>

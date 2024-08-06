@@ -10,36 +10,23 @@ class Home extends BaseController
         return view('home');
     }
 
-    //gearlibrary page (/gearlibrary) in routes.php
-    public function gearlibrary() {
-        return view('gearlibrary');
-    }
-    
-    //community page (/community) in routes.php
-    public function community() {
-        return view('community');
+    public function gearLibrary(){
+        return view('library');
     }
 
-    // customize page (/customize) in routes.php
-    public function customize() {
+    public function community(){
+        return view('comm');
+    }
+
+    public function customize(){
         return view('customize');
     }
 
-    // shop page (/shop) in routes.php
-    public function shop() {
-        return view('shop');
+    public function shop(){
+        return view('shopp');
     }
 
-    // cart page (/cart) in routes.php
-    public function cart() {
-        return view('cart');
-    }
-
-    // signup page (/signup_login) in routes.php
-    public function signup_login() {
+    public function loginSignup() {
         return view('signup_login');
     }
-
-
-
 }

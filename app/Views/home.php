@@ -18,7 +18,7 @@
                 <h1>Elevate your Experience</h1>
             </div>
 
-            <nav>
+            <nav>   
                 <div class="logo">
                     <a href="./index.php">
                         <img src="./img/301117165_464244785717653_8213835756832948193_n-removebg-preview.png" alt="">
@@ -35,7 +35,7 @@
                     </li>
 
                     <li>
-                        <a href="<?= base_url("/comm") ?>">IEM Community</a>            
+                        <a href="<?= base_url("/community") ?>">IEM Community</a>            
                     </li>
 
                     <li>
@@ -43,11 +43,11 @@
                     </li>
 
                     <li>
-                        <a class="shop" href="<?= base_url("/shopp") ?>">Shop</a> 
+                        <a class="shop" href="<?= base_url("/shop") ?>">Shop</a> 
                     </li>
 
                     <div class="logn">
-                        <a href="<?= base_url("/signup_login") ?>"><i class="fa-solid fa-user-plus"></i></a>
+                        <a href="<?= base_url("/account") ?>"><i class="fa-solid fa-user-plus"></i></a>
                     </div>
                 </ul>
             </nav>

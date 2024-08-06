@@ -10,23 +10,28 @@ class Home extends BaseController
         return view('home');
     }
 
+    //return library file in views
     public function gearLibrary(){
         return view('library');
     }
 
+    //return community(comm) file in views
     public function community(){
         return view('comm');
     }
 
+    //return customize file in views
     public function customize(){
         return view('customize');
     }
 
+    //return shopp file in views
     public function shop(){
         return view('shopp');
     }
 
-    public function loginSignup() {
+    //return signup_login file in views
+    public function account() {
         return view('signup_login');
     }
 }

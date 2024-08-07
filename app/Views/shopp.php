@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="<?= base_url("assets/css/footer.css") ?>">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <script defer src="../views/script2.js"></script>
+    <script defer src=" <?= base_url("assets/js/script2.js") ?>"></script>
     <title>INM Shop</title>
 </head>
 <body>
@@ -21,7 +21,7 @@
         <nav>   
                 <div class="logo">
                     <a href="./index.php">
-                        <img src="./img/301117165_464244785717653_8213835756832948193_n-removebg-preview.png" alt="">
+                        <img src=" <?= base_url("assets/img/301117165_464244785717653_8213835756832948193_n-removebg-preview.png") ?>" alt="">
                     </a>
                 </div>
 
@@ -56,13 +56,13 @@
     <div class="shop">
         <div class="shop-title">
             <h2>Shop</h2>
-            <a href="../views/cart.php <?= base_url("/shop") ?>"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href=" <?= base_url("/shop/cart") ?>"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
 
 
         <div class="card-container">
             <div class="library-card">
-                <img src="../img/p1.png" alt="">
+                <img src=" <?= base_url("assets/img/p1.png") ?>" alt="">
                 <h3>Musical Gear</h3>
                 <h4>₱10,000</h4>
                 <button data-modal-target="#modal" class="btn">Add To Card</button>
@@ -70,7 +70,7 @@
                 <div class="modal" id="modal">
                     <div class="modal-header">
                         <div class="product-img" title>
-                            <img src="../img/order6.png" alt="">
+                            <img src="<?= base_url("assets/img/order6.png") ?>" alt="">
                         </div>
                         <div class="product-details">
                             <p>Liberty 1965</p>
@@ -88,12 +88,12 @@
                             </div>
                             <div class="cart-button">
                                 <div class="cart">
-                                    <a href="cart.php">
+                                    <a href="<?= base_url("/shop/cart") ?>">
                                         <button>Add to Cart</button>
                                     </a>
                                 </div>
                                 <div class="buy">
-                                    <a href="buynow.php">
+                                    <a href=" <?= base_url("/shop/buynow") ?>">
                                         <button>Buy Now</button>
                                     </a>
                                 </div>
@@ -110,7 +110,7 @@
             </div>
 
             <div class="library-card">
-                <img src="../img/p1.png" alt="">
+                <img src=" <?= base_url("assets/img/p1.png") ?>" alt="">
                 <h3>Musical Gear</h3>
                 <h4>₱10,000</h4>
                 <button data-modal-target="#modal" class="btn">Add To Card</button>
@@ -121,14 +121,14 @@
                         <button data-close-button class="close-button">&times;</button>
                     </div>
                     <div class="modal-body">
-                        <img src="img/iem.png" alt="">
+                        <img src="<?= base_url("assets/img/iem.png") ?>" alt="">
                         <h3>Lorem</h3>
                     </div>  
                 </div>
             </div>
 
             <div class="library-card">
-                <img src="../img/p1.png" alt="">
+                <img src=" <?= base_url("assets/img/p1.png") ?>" alt="">
                 <h3>Musical Gear</h3>
                 <h4>₱10,000</h4>
                 <button data-modal-target="#modal" class="btn">Add To Card</button>
@@ -139,14 +139,14 @@
                         <button data-close-button class="close-button">&times;</button>
                     </div>
                     <div class="modal-body">
-                        <img src="img/iem.png" alt="">
+                        <img src="<?= base_url("assets/img/iem.png") ?>" alt="">
                         <h3>Lorem</h3>
                     </div>  
                 </div>
             </div>
 
             <div class="library-card">
-                <img src="../img/p1.png" alt="">
+                <img src="<?= base_url("assets/img/p1.png") ?>" alt="">
                 <h3>Musical Gear</h3>
                 <h4>₱10,000</h4>
                 <button data-modal-target="#modal" class="btn">Add To Card</button>
@@ -157,14 +157,14 @@
                         <button data-close-button class="close-button">&times;</button>
                     </div>
                     <div class="modal-body">
-                        <img src="img/iem.png" alt="">
+                        <img src="<?= base_url("assets/img/iem.png") ?>" alt="">
                         <h3>Lorem</h3>
                     </div>  
                 </div>
             </div>
 
             <div class="library-card">
-                <img src="../img/p1.png" alt="">
+                <img src=" <?= base_url("assets/img/p1.png") ?>" alt="">
                 <h3>Musical Gear</h3>
                 <h4>₱10,000</h4>
                 <button data-modal-target="#modal" class="btn">Add To Card</button>
@@ -175,14 +175,14 @@
                         <button data-close-button class="close-button">&times;</button>
                     </div>
                     <div class="modal-body">
-                        <img src="img/iem.png" alt="">
+                        <img src=" <?= base_url("assets/img/iem.png") ?>" alt="">
                         <h3>Lorem</h3>
                     </div>  
                 </div>
             </div>
 
             <div class="library-card">
-                <img src="../img/p1.png" alt="">
+                <img src="<?= base_url("assets/img/p1.png") ?>" alt="">
                 <h3>Musical Gear</h3>
                 <h4>₱10,000</h4>
                 <button data-modal-target="#modal" class="btn">Add To Card</button>
@@ -193,7 +193,7 @@
                         <button data-close-button class="close-button">&times;</button>
                     </div>
                     <div class="modal-body">
-                        <img src="img/iem.png" alt="">
+                        <img src="<?= base_url("assets/img/iem.png") ?>" alt="">
                         <h3>Lorem</h3>
                     </div>  
                 </div>

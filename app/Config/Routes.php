@@ -16,4 +16,8 @@ $routes->group('', function($routes){
     $routes->get('/account', 'Home::account');
 });
 
+$routes->group('/shop', function($routes) {
+    $routes->get('/', 'Shop::cart');
+    $routes->get('/', 'Shop::buynow');
+});
 

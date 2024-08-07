@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/buynow.css">
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/footer.css">
+
+    <link rel="stylesheet" href="<?= base_url("assets/css/buynow.css") ?>">
+    <link rel="stylesheet" href="<?= base_url("assets/css/navbar.css") ?>">
+    <link rel="stylesheet" href="<?= base_url("assets/css/footer.css") ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <script defer src="../views/script2.js"></script>
+    <script defer src=" <?= base_url("assets/js/script2.js") ?>"></script>
+
     <title>Checkoout</title>
 </head>
 <body>
@@ -16,8 +18,8 @@
       <div class="navigation">
 
         <div class="logo">
-          <a href="/">
-            <img src="../img/301117165_464244785717653_8213835756832948193_n-removebg-preview.png" alt="">
+          <a href="<?= base_url("/") ?>">
+            <img src=" <?= base_url("assets/img/301117165_464244785717653_8213835756832948193_n-removebg-preview.png") ?>" alt="">
           </a>
         </div>
         <div class="secure">

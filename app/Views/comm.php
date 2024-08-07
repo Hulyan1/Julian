@@ -20,7 +20,7 @@
         <nav>   
                 <div class="logo">
                     <a href="./index.php">
-                        <img src="./img/301117165_464244785717653_8213835756832948193_n-removebg-preview.png" alt="">
+                        <img src=" <?= base_url("assets/img/301117165_464244785717653_8213835756832948193_n-removebg-preview.png") ?>" alt="">
                     </a>
                 </div>
 

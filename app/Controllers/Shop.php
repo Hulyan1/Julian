@@ -5,8 +5,12 @@ namespace App\Controllers;
 class Shop extends BaseController
 {
 
-    public function home(){
-        return view('shop');
+    public function cart(){
+        return view('cart');
+    }
+
+    public function buynow() {
+        return view('buynow');
     }
 
 }

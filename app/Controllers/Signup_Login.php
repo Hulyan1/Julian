@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\adminAccounts;
 use App\Models\userAccounts;
+
 use CodeIgniter\Controller;
 use CodeIgniter\Controller\Home;
 
@@ -28,14 +29,14 @@ class Signup_Login extends BaseController
     }
 
     // login user 
-    public function loginUser()
+    public function registerUserAccount()
     {
 
     }
 
 
 
-    // login as admin  
+    // login as admin 
     public function loginAdmin()
     {
         $usernameOrEmail = $_POST['username'];
@@ -60,41 +61,36 @@ class Signup_Login extends BaseController
                 $this->session->set($data);
 
                 return view('AdminSide/index');
-            }
-            else {
-                return view('/signup_login');
+            } else {
+                $userAccount = new userAccounts();
+                $userFields = $userAccount->findAll();
+
+                foreach($userFields as $user) {
+                    $userId = $user['user_accounts_id'];
+                    $userU = $user['username'];
+                    $emailU = $user['email'];
+                    $passU = $user['password'];
+
+                    if(($usernameOrEmail == $userU && $password == $passU) || ($usernameOrEmail == $emailU && $password == $passU)) {
+                        $data = [
+                            'user_id' => $userId, 
+                            'username' => $userU, 
+                            'email' => $emailU,
+                            'user_logged_in' => true
+                        ];
+                        $this->session->set($data);
+        
+                        return view('AdminSide/index');
+                    }  else {
+                        return view('/signup_login');
+                    }   
+                }
             }    
-        }   
+        }
     }
 
 
-
-
-    // public function login1() {
-    //     $username = $_POST['username'];
-    //     $password = $_POST['pass'];
-
-    //     $adminAccount = new adminAccounts();
-    //     $adminFields = $adminAccount->findAll();
-        
-    //     $userAccount = new userAccounts();
-    //     $userFields = $userAccount->findAll();
-
-    //     foreach($userFields as $user){
-    //         $userU = $user['username'];
-    //         $emailU = $user['email'];
-    //         $passU = $user['password'];
     
-    //         if($userU == $username || $emailU == $username && $password == $passU) {
-    //             // return view('UserSide/index');
-    //             return "it is working"; //change this to proper path
-    //         }else {
-                
-    //         }
-    //     }   
-    // }
-
-
     // Log out method
     public function logout()
     {

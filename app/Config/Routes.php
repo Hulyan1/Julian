@@ -16,8 +16,9 @@ $routes->group('', function($routes){
     $routes->get('/shop', 'Home::shop');
     $routes->get('/account', 'Home::account');
 
-    $routes->post('/account/admin', 'Signup_Login::loginAdmin');
-    $routes->post('/account/user', 'Signup_Login::loginUser');
+    // login account for admin or user routes
+    $routes->post('/account/accountLogin', 'Signup_Login::loginAdmin');
+    $routes->post('/account/user', 'Signup_Login::registerUserAccount');
 });
 
 // Shop routes - after the "localhost/project_name/public/shop/"

@@ -47,7 +47,7 @@
 
 <!-- this is login form for admin? -->
             <div class="login">
-                <form action="<?= base_url("/account/admin") ?>" method="post">
+                <form action="<?= base_url("/account/accountLogin") ?>" method="post">
                     <label for="chk" aria-hidden="true" class="logins">Login</label><label for="chk" aria-hidden="true" class="xbutton"><i class="fa-solid fa-xmark"></i></label>
                     <input type="text" name="username" id="email" placeholder="Enter your Username or Email" required>
                     <input type="text" name="pass" id="pass" placeholder="Enter your Password" required>

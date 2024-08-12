@@ -58,7 +58,6 @@ class Signup_Login extends BaseController
     // login as admin or user
     public function loginAdminOrUser()
     {
-
         // log in for admin acccounts
         $usernameOrEmail = $_POST['username'];
         $password = $_POST['pass'];
@@ -81,7 +80,7 @@ class Signup_Login extends BaseController
                 ];
                 $this->session->set($data);
 
-                return view('AdminSide/index');
+                return view('AdminSide/adminIndex');
             }   
         }
 

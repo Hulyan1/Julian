@@ -19,7 +19,7 @@ class Home extends BaseController
     //index or home or landing page (/) in routes.php
     public function home() {
         if ($this->session->get('admin_logged_in')) {
-            return view('AdminSide/index');
+            return view('AdminSide/adminIndex');
         } 
         else if($this->session->get('user_logged_in')) {
             return view('UserSide/userHome');
@@ -33,7 +33,7 @@ class Home extends BaseController
     //return library file in views
     public function gearLibrary(){
         if ($this->session->get('admin_logged_in')) {
-            return view('AdminSide/index');
+            return view('AdminSide/adminIndex');
         }
         else if($this->session->get('user_logged_in')) {
             return view('UserSide/userLibrary');
@@ -47,7 +47,7 @@ class Home extends BaseController
     //return community(comm) file in views
     public function community(){
         if ($this->session->get('admin_logged_in')) {
-            return view('AdminSide/index');
+            return view('AdminSide/adminIndex');
         } 
         else if($this->session->get('user_logged_in')) {
             return view('UserSide/userComm');
@@ -63,7 +63,7 @@ class Home extends BaseController
     public function customize(){
         // if login in to admin account session
         if ($this->session->get('admin_logged_in')) {
-            return view('AdminSide/index');
+            return view('AdminSide/adminIndex');
         }
         else if($this->session->get('user_logged_in')) {
             return view('UserSide/userCustomize');
@@ -78,7 +78,7 @@ class Home extends BaseController
     //return shopp file in views
     public function shop(){
         if ($this->session->get('admin_logged_in')) {
-            return view('AdminSide/index');
+            return view('AdminSide/adminIndex');
         } 
         else if($this->session->get('user_logged_in')) {
             return view('UserSide/userShopp');
@@ -93,7 +93,7 @@ class Home extends BaseController
     //return signup_login file in views
     public function account() {
         if ($this->session->get('admin_logged_in')) {
-            return view('AdminSide/index');
+            return view('AdminSide/adminIndex');
         } 
         else if($this->session->get('user_logged_in')) {
             return view('UserSide/userAccountSettings');

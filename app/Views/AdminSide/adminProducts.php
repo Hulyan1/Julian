@@ -135,7 +135,7 @@
         <div class="container-fluid">
           <div class="card">
             <div class="card-body">
-              <a href="addNewProduct.php"><button class="btn btn-primary w-30 py-8 fs-4 mb-4 rounded-2" value="submit"> Add New Product </button></a>
+              <a href=""><button class="btn btn-primary w-30 py-8 fs-4 mb-4 rounded-2" value="submit"> Add New Product </button></a>
               <h5 class="card-title fw-semibold mb-4">Products </h5>          
 
               <div class="card">
@@ -152,19 +152,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                     
-
-
-
-
-
-
-
-
-
-
-                    
-
+                      <!-- rows here  -->
                     </tbody>
                   </table>
 

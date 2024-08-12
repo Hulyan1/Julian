@@ -47,7 +47,7 @@ $routes->group('', function($routes){
     $routes->get('/admin/products', 'AdminDashboard::products');
     $routes->get('/admin/manageUsers', 'AdminDashboard::userManagement');
     $routes->get('/admin/adminRegister', 'AdminDashboard::register');
-    $routes->post('/admin/addNewAdmin', 'AdminDashboard::addNewAdmin');
 
+    $routes->post('/admin/addNewAdmin', 'AdminDashboard::addNewAdmin');
 });
 

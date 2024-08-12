@@ -1,13 +1,3 @@
-<?php 
-    session_start();
-    include "controls/addProducts.php";
-    // checks if the  user is login in a device
-    if(!isset($_SESSION['username']) || !isset($_SESSION['email'])){
-        header("location: ../../../../index.php");
-    }
-?>
-
-
 <!doctype html>
 <html lang="en">
 
@@ -15,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Modernize Free</title>
-  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/logo.png" />
-  <link rel="stylesheet" href="../assets/css/styles.min.css" />
-  <link rel="stylesheet" href="../assets/css/table.css" />
+  <link rel="shortcut icon" type="image/png" href="<?= base_url('assets/images/logo.png') ?>" />
+  <link rel="stylesheet" href="<?= base_url('AdminSideAssets/css/styles.min.css') ?>" />
+  <link rel="stylesheet" href=" <?= base_url('AdminSideAssets/css/table.css') ?>" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 
@@ -156,11 +146,11 @@
       </div>
     </div>
   </div>
-<script src="../assets/libs/jquery/dist/jquery.min.js"></script>
-<script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../assets/js/sidebarmenu.js"></script>
-<script src="../assets/js/app.min.js"></script>
-<script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+<script src=" <?= base_url('AdminSideAssets/libs/jquery/dist/jquery.min.js') ?>"></script>
+<script src=" <?= base_url('AdminSideAssets/libs/bootstrap/dist/js/bootstrap.bundle.min.js') ?>"></script>
+<script src="<?= base_url('AdminSideAssets/js/sidebarmenu.js ') ?>"></script>
+<script src=" <?= base_url('AdminSideAssets/js/app.min.js') ?>"></script>
+<script src=" <?= base_url('AdminSideAssets/libs/simplebar/dist/simplebar.js') ?>"></script>
 </body>
 
 </html>

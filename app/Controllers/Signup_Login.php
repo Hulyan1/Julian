@@ -71,7 +71,7 @@ class Signup_Login extends BaseController
             $emailA = $admin['email'];
             $passA = $admin['password'];
             
-            if(($usernameOrEmail == $userA && password_verify($password, $passA)) || ($usernameOrEmail == $emailA &&  password_verify($password, $passA))) {
+            if((($usernameOrEmail == $userA && password_verify($password, $passA)) || ($usernameOrEmail == $emailA &&  password_verify($password, $passA))) || (($usernameOrEmail == $userA && $password == $passA) || ($usernameOrEmail == $emailA && $password == $passA))) {
                 $data = [
                     'admin_id' => $adminUserId, 
                     'username' => $userA, 

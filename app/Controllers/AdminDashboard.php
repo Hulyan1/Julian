@@ -43,6 +43,8 @@ class AdminDashboard extends BaseController {
 
 
 
+
+    // adds new administrator with validations
     public function addNewAdmin() {
         $model = new adminAccounts();
         $email = $this->request->getPost('email');
@@ -71,4 +73,9 @@ class AdminDashboard extends BaseController {
             return redirect()->back()->with('error', 'An error occurred while creating the account.');
         }
     }
+
+
+        public function addProduct() {
+            
+        }
 }

@@ -1,13 +1,3 @@
-<?php 
-    session_start();
-
-    // checks if the  user is login in a device
-    if(!isset($_SESSION['username']) || !isset($_SESSION['email'])){
-        header("location: ../../../../index.php");
-    }
-?>
-
-
 <!doctype html>
 <html lang="en">
 
@@ -96,7 +86,7 @@
               <span class="hide-menu">AUTH</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="controls/logout.php" aria-expanded="false">
+              <a class="sidebar-link" href="<?= base_url("Signup_Login/logout") ?>" aria-expanded="false">
                 <span>
                   <i class="ti ti-login"></i>
                 </span>

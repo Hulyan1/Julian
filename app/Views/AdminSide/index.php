@@ -1,7 +1,3 @@
-<?php 
-  
-?>
-
 <!doctype html>
 <html lang="en">
 
@@ -96,7 +92,7 @@
 
             <!-- Log out button -->
             <li class="sidebar-item">
-              <a class="sidebar-link" href="" aria-expanded="false">
+              <a class="sidebar-link" href="<?= base_url("Signup_Login/logout") ?>" aria-expanded="false">
                 <span>
                   <i class="ti ti-login"></i>
                 </span>

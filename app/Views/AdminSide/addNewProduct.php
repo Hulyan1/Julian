@@ -92,7 +92,7 @@
             </li>
 
             <li class="sidebar-item">
-              <a class="sidebar-link" href="controls/logout.php" aria-expanded="false">
+              <a class="sidebar-link" href="<?= base_url("Signup_Login/logout") ?>" aria-expanded="false">
                 <span>
                   <i class="ti ti-login"></i>
                 </span>

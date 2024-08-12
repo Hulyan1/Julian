@@ -26,7 +26,7 @@
 
 <!-- this is sign up form -->
             <div class="signup">
-                <form action="signup_login/Signup" method="post">
+                <form action="" method="post">
                     <label for="chk" aria-hidden="true">Sign up</label>
                     <h5><a href="<?= base_url('/') ?>">Home</a></h5>
                     <div class="input-block">
@@ -47,7 +47,7 @@
 
 <!-- this is login form for admin? -->
             <div class="login">
-                <form action="signup_login/login" method="post">
+                <form action="<?= base_url("/account/admin") ?>" method="post">
                     <label for="chk" aria-hidden="true" class="logins">Login</label><label for="chk" aria-hidden="true" class="xbutton"><i class="fa-solid fa-xmark"></i></label>
                     <input type="text" name="username" id="email" placeholder="Enter your Username or Email" required>
                     <input type="text" name="pass" id="pass" placeholder="Enter your Password" required>

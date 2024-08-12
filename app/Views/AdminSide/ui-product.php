@@ -1,21 +1,3 @@
-<?php 
-    session_start();
-
-    if(!isset($_SESSION['username']) || !isset($_SESSION['email'])){
-      header("location: ../../../../index.php");
-    }
-
-    include "../../../model/connection.php";
-
-    // Prepare and execute SQL
-    $stmt = $conn->prepare("SELECT * FROM products");
-    $stmt->execute();
-
-    // Fetch all products
-    $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
-?>
-
-
 <!doctype html>
 <html lang="en">
 
@@ -100,7 +82,7 @@
             </li>
 
             <li class="sidebar-item">
-              <a class="sidebar-link" href="controls/logout.php" aria-expanded="false">
+              <a class="sidebar-link" href="<?= base_url("Signup_Login/logout") ?>" aria-expanded="false">
                 <span>
                   <i class="ti ti-login"></i>
                 </span>
@@ -152,18 +134,18 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <?php foreach ($products as $product): ?>
-                        <tr>
-                            <td><img class="prodimg" src="controls/uploads/<?php echo htmlspecialchars($product['product']); ?>" width="100" alt="Product"></td>
-                            <td><?php echo htmlspecialchars($product['name']); ?></td>
-                            <td><?php echo htmlspecialchars($product['price']); ?></td>
-                            <td><?php echo htmlspecialchars($product['category']); ?></td>
-                            <td>
-                              <a class="btn btn-secondary w-30 py-10 fs-4 mb-4 rounded-2" href="product_Sett/edit_product.php?id=<?php echo $product['product_id']; ?>">Edit</a>
-                              <a class="btn w-30 py-10 fs-4 mb-4 rounded-2" style="color: red;" href="product_Sett/delete_product.php?id=<?php echo $product['product_id']; ?>" onclick="return confirm('Are you sure?')">Remove</a>
-                            </td>
-                        </tr>
-                      <?php endforeach; ?>  
+                     
+
+
+
+
+
+
+
+
+
+
+                    
 
                     </tbody>
                   </table>

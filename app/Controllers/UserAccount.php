@@ -18,6 +18,6 @@ class Signup_Login extends BaseController
 
 
     public function home() {
-        
+        return view("UserSide\home");
     }
 }

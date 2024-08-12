@@ -7,12 +7,13 @@ use CodeIgniter\Model;
 class products extends Model 
 {
     protected $table = 'products';
-    protected $primaryKey = 'product_id';
+    protected $primaryKey = 'pro_id';
 
-    protected $fields = [
+    protected $allowedFields = [
         'product',
-        'name',
         'price',
-        'category'
+        'quantity',
+        'cat_id',
+        'image',
     ];
 }

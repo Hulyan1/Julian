@@ -75,7 +75,59 @@ class AdminDashboard extends BaseController {
     }
 
 
-        public function addProduct() {
+
+    // add products and store them in the database table as URL and stores the image in the uploads folder.
+    public function addProduct() {
+       if ($this->request->getMethod() === 'post') {
+        $validation = \Config\Services::validation();
+
+        // Define validation rules
+        $validation->setRules([
+            'product' => 'required|min_length[3]|max_length[255]',
+            'price' => 'required|numeric',
+            'quantity' => 'required|integer',
+            'cat_id' => 'required|integer',
+            'image' => 'uploaded[image]|max_size[image,5048]|is_image[image]'
+        ]);
+
+        // Check if form validation passed
+        if ($validation->withRequest($this->request)->run()) {
+            // Handle file upload
+            $image = $this->request->getFile('image');
+            if ($image->isValid() && !$image->hasMoved()) {
+                $newName = $image->getRandomName();
+                $image->move('uploads', $newName);
+            } else {
+                $newName = null;
+            }
             
+            
+
+            // Prepare data for insertion
+            $data = [
+                'product' => $this->request->getPost('product'),
+                'price' => $this->request->getPost('price'),
+                'quantity' => $this->request->getPost('quantity'),
+                'cat_id' => $this->request->getPost('cat_id'),
+                'image' => $newName
+            ];
+
+            // Save the product to the database
+            $model = new \App\Models\products();
+            if ($model->save($data)) {
+                // Redirect with success message
+                return redirect()->to('AdminSide/adminProducts')->with('success', 'Product added successfully!');
+            } else {
+                // Redirect with error message
+                return redirect()->to('AdminSide/adminProducts')->with('error', 'Failed to add product.');
+            }
+        } else {
+            // Redirect back with validation errors
+            return redirect()->back()->withInput()->with('errors', $validation->getErrors());
         }
+    }
+
+    // Render the add product view if method is not POST
+    return view('AdminSide/adminProducts');                                 
+    }
 }

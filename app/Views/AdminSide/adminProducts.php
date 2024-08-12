@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="<?= base_url('AdminSideAssets/css/styles.min.css') ?>" />
   <link rel="stylesheet" href="<?= base_url('AdminSideAssets/css/table.css') ?>" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
 </head>
 
 <body>
@@ -128,42 +129,92 @@
 
     <!--  Main wrapper -->
     <div class="body-wrapper">
-      <!--  Header Start -->
-     
-      <!--  Header End -->
-      <div class="container-fluid">
-        <div class="container-fluid">
-          <div class="card">
-            <div class="card-body">
-              <a href=""><button class="btn btn-primary w-30 py-8 fs-4 mb-4 rounded-2" value="submit"> Add New Product </button></a>
-              <h5 class="card-title fw-semibold mb-4">Products </h5>          
+    <div class="container-fluid">
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-body">
+        <button class="btn btn-primary w-30 py-8 fs-4 mb-4 rounded-2" data-bs-toggle="modal" data-bs-target="#addProductModal">
+          Add New Product
+        </button>
+        <h5 class="card-title fw-semibold mb-4">Products </h5>          
 
-              <div class="card">
-                <div class="card-body p-4">
-              
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Product</th>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Category</th>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <!-- rows here  -->
-                    </tbody>
-                  </table>
-
-                </div>
-              </div>
-            </div>
+        <div class="card">
+          <div class="card-body p-4">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>Category</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- rows here  -->
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<!-- Modal for Adding Product -->
+<div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addProductModalLabel">Add New Product</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <form action="<?= base_url('/admin/newProduct') ?>" method="post" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="product" class="form-label">Product Name</label>
+            <input type="text" class="form-control" id="product" name="product" required>
+          </div>
+          <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" class="form-control" id="price" name="price" required>
+          </div>
+          <div class="mb-3">
+            <label for="quantity" class="form-label">Quantity</label>
+            <input type="number" class="form-control" id="quantity" name="quantity" required>
+          </div>
+          <div class="mb-3">
+            <label for="cat_id" class="form-label">Category</label>
+            <select class="form-select" id="cat_id" name="cat_id" >
+
+              <!-- Populate options dynamically from categories table -->
+  
+
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="image" class="form-label">Product Image</label>
+            <input type="file" class="form-control" id="image" name="image" accept="image/*">
+          </div>
+          <button type="submit" class="btn btn-primary">Add Product</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <?php if (session()->getFlashdata('success')): ?>
+    <div class="alert alert-success">
+      <?= session()->getFlashdata('success') ?>
+    </div>
+  <?php endif; ?>
+
+  <?php if (session()->getFlashdata('error')): ?>
+    <div class="alert alert-danger">
+      <?= session()->getFlashdata('error') ?>
+    </div>
+  <?php endif; ?>
 
 
   <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
@@ -171,6 +222,8 @@
   <script src="../assets/js/sidebarmenu.js"></script>
   <script src="../assets/js/app.min.js"></script>
   <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>

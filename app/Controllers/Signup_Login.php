@@ -22,17 +22,16 @@ class Signup_Login extends BaseController
 
 // ------------------------------------------------------------------------------------------------------------ //
 
-
-    // signup / create admin 
-    public function signup() {
-
-    }
-
-
     // signup / create user 
     public function registerUserAccount()
     {
         $model = new UserAccounts();
+        $email = $this->request->getPost('email');
+
+        // Check if email already exists
+        if ($model->where('email', $email)->first()) {
+            return redirect()->back()->with('error', 'Email is already in use.');
+        }
 
         $data = [
             'firstname' => $this->request->getPost('fname'),
@@ -42,13 +41,16 @@ class Signup_Login extends BaseController
             'password' => password_hash($this->request->getPost('pass'), PASSWORD_DEFAULT),
         ];
 
+        // Check if passwords match
         if ($this->request->getPost('pass') !== $this->request->getPost('cpass')) {
-            return redirect()->back();
+            return redirect()->back()->with('error', 'Passwords do not match.');
         }
 
+        // Save user data
         $model->save($data);
 
-        return redirect()->to('/account'); //->with('success', 'Account successfully created. Please login.');
+        // Set success message
+        return redirect()->to('/account')->with('success', 'Account successfully created. Please login.');
     }
 
 
@@ -56,6 +58,8 @@ class Signup_Login extends BaseController
     // login as admin or user
     public function loginAdminOrUser()
     {
+
+        // log in for admin acccounts
         $usernameOrEmail = $_POST['username'];
         $password = $_POST['pass'];
 
@@ -78,32 +82,33 @@ class Signup_Login extends BaseController
                 $this->session->set($data);
 
                 return view('AdminSide/index');
-            } else {
-                $userAccount = new userAccounts();
-                $userFields = $userAccount->findAll();
-
-                foreach($userFields as $user) {
-                    $userId = $user['user_accounts_id'];
-                    $userU = $user['username'];
-                    $emailU = $user['email'];
-                    $passU = $user['password'];
-
-                    if(($usernameOrEmail == $userU && $password == $passU) || ($usernameOrEmail == $emailU && $password == $passU)) {
-                        $data = [
-                            'user_id' => $userId, 
-                            'username' => $userU, 
-                            'email' => $emailU,
-                            'user_logged_in' => true
-                        ];
-                        $this->session->set($data);
-        
-                        return view('AdminSide/index');
-                    }  else {
-                        return view('/signup_login');
-                    }   
-                }
-            }    
+            }   
         }
+
+
+        // login for user accounts
+        $userAccount = new userAccounts();
+        $userFields = $userAccount->findAll();
+
+        foreach ($userFields as $user) {
+            $userId = $user['user_accounts_id'];
+            $emailU = $user['email'];
+            $passU = $user['password'];
+
+            // Use password_verify for hashed passwords
+            if ($usernameOrEmail == $emailU && password_verify($password, $passU)) {
+                $data = [
+                    'user_id' => $userId,
+                    'email' => $emailU,
+                    'user_logged_in' => true
+                ];
+                $this->session->set($data);
+
+                return view('UserSide/userprofile');
+            }
+        }
+
+        return view('/signup_login');
     }
 
 

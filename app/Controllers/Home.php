@@ -27,7 +27,7 @@ class Home extends BaseController
 
         // if login in to user account session
         if ($this->session->get('user_logged_in')){
-            return view('');
+            return view('UserSide\userHome');
         } else {
             return view('home');
         }
@@ -46,7 +46,7 @@ class Home extends BaseController
 
         // if login in to user account session
         if ($this->session->get('user_logged_in')){
-            return view('');
+            return view('UserSide\userLibrary');
         } else {
             return view('library');
         }
@@ -65,7 +65,7 @@ class Home extends BaseController
 
         // if login in to user account session
         if ($this->session->get('user_logged_in')){
-            return view('');
+            return view('UserSide\userComm');
         } else {
             return view('comm');
         }
@@ -84,7 +84,7 @@ class Home extends BaseController
 
         // if login in to user account session
         if ($this->session->get('user_logged_in')){
-            return view('');
+            return view('UserSide\userCustomize');
         } else {
             return view('customize');
         }
@@ -103,7 +103,7 @@ class Home extends BaseController
 
         // if login in to user account session
         if ($this->session->get('user_logged_in')){
-            return view('');
+            return view('UserSide\userShopp');
         } else {
             return view('shopp');
         }
@@ -122,7 +122,7 @@ class Home extends BaseController
 
         // if login in to user account session
         if ($this->session->get('user_logged_in')){
-            return view('');
+            return view('UserSide\userAccountSettings');
         } else {
             return view('signup_login');
         }

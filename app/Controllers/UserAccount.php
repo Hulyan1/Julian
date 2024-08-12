@@ -40,4 +40,11 @@ class UserAccount extends BaseController
     public function accountSettings() {
         return view("UserSide/userAccountSettings");
     }
+
+
+    public function logout()
+    {
+        $this->session->destroy();
+        return redirect()->to('/');
+    }
 }

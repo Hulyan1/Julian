@@ -18,17 +18,12 @@ class Home extends BaseController
 // return the wepages in view folder
     //index or home or landing page (/) in routes.php
     public function home() {
-        // if login in to admin account session
         if ($this->session->get('admin_logged_in')) {
             return view('AdminSide/index');
-        } else {
-            return view('home');
-        }
-
-        // if login in to user account session
-        if ($this->session->get('user_logged_in')){
-            return view('UserSide\userHome');
-        } else {
+        } 
+        else if($this->session->get('user_logged_in')) {
+            return view('UserSide/userHome');
+        }else {
             return view('home');
         }
     }
@@ -37,16 +32,11 @@ class Home extends BaseController
 
     //return library file in views
     public function gearLibrary(){
-        // if login in to admin account session
         if ($this->session->get('admin_logged_in')) {
             return view('AdminSide/index');
-        } else {
-            return view('library');
         }
-
-        // if login in to user account session
-        if ($this->session->get('user_logged_in')){
-            return view('UserSide\userLibrary');
+        else if($this->session->get('user_logged_in')) {
+            return view('UserSide/userLibrary');
         } else {
             return view('library');
         }
@@ -56,17 +46,13 @@ class Home extends BaseController
 
     //return community(comm) file in views
     public function community(){
-        // if login in to admin account session
         if ($this->session->get('admin_logged_in')) {
             return view('AdminSide/index');
-        } else {
-            return view('comm');
+        } 
+        else if($this->session->get('user_logged_in')) {
+            return view('UserSide/userComm');
         }
-
-        // if login in to user account session
-        if ($this->session->get('user_logged_in')){
-            return view('UserSide\userComm');
-        } else {
+        else {
             return view('comm');
         }
     }
@@ -78,14 +64,11 @@ class Home extends BaseController
         // if login in to admin account session
         if ($this->session->get('admin_logged_in')) {
             return view('AdminSide/index');
-        } else {
-            return view('customize');
         }
-
-        // if login in to user account session
-        if ($this->session->get('user_logged_in')){
-            return view('UserSide\userCustomize');
-        } else {
+        else if($this->session->get('user_logged_in')) {
+            return view('UserSide/userCustomize');
+        }
+         else {
             return view('customize');
         }
     }
@@ -94,17 +77,13 @@ class Home extends BaseController
 
     //return shopp file in views
     public function shop(){
-                // if login in to admin account session
         if ($this->session->get('admin_logged_in')) {
             return view('AdminSide/index');
-        } else {
-            return view('shopp');
+        } 
+        else if($this->session->get('user_logged_in')) {
+            return view('UserSide/userShopp');
         }
-
-        // if login in to user account session
-        if ($this->session->get('user_logged_in')){
-            return view('UserSide\userShopp');
-        } else {
+        else {
             return view('shopp');
         }
     }
@@ -113,17 +92,13 @@ class Home extends BaseController
 
     //return signup_login file in views
     public function account() {
-                // if login in to admin account session
         if ($this->session->get('admin_logged_in')) {
             return view('AdminSide/index');
-        } else {
-            return view('signup_login');
+        } 
+        else if($this->session->get('user_logged_in')) {
+            return view('UserSide/userAccountSettings');
         }
-
-        // if login in to user account session
-        if ($this->session->get('user_logged_in')){
-            return view('UserSide\userAccountSettings');
-        } else {
+        else {
             return view('signup_login');
         }
     }

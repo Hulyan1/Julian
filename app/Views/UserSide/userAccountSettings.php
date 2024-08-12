@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="<?= base_url("assets/css/navbar.css") ?>">
     <link rel="stylesheet" href="<?= base_url("assets/css/footer.css") ?>">
 
+    <link rel="shortcut icon" type="image/png" href=" <?= base_url('AdminSideAssets/images/logos/logo.png') ?>" />
+    <link rel="stylesheet" href="<?= base_url('AdminSideAssets/css/styles.min.css') ?>"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <script defer src=" <?= base_url("assets/js/script2.js") ?>"></script>
     <title>INM Shop</title>
@@ -47,7 +51,7 @@
                     </li>
 
                     <div class="logn">
-                        <a href="<?= base_url("/AccountSettings") ?>"><i class="fa-solid fa-user-plus"></i></a>
+                        <a href="<?= base_url("/AccountSettings") ?>"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16"><path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/><path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/></svg></a>
                     </div>
                 </ul>
             </nav>
@@ -56,7 +60,15 @@
 
 <!-- main content -->
     <main>
-
+            <!-- Log out button -->
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="<?= base_url("UserAccount/logout") ?>" aria-expanded="false">
+                <span>
+                  <i class="ti ti-login"></i>
+                </span>
+                <span class="hide-menu">Logout</span>
+              </a>
+            </li>
     </main>
     
     

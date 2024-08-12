@@ -13,4 +13,10 @@ class adminAccounts extends Model
         'email',
         'password'
     ];
+
+    protected $allowedFields = [
+        'username',
+        'email',
+        'password'
+    ];
 }

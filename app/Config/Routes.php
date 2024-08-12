@@ -29,6 +29,7 @@ $routes->group('/shop', function($routes) {
 });
 
 
+// user side routes
 $routes->group('', function($routes) {
     $routes->get('/Home', "UserAccount::home");
     $routes->get('/Library', 'UserAccount::gearLibrary');  
@@ -42,9 +43,11 @@ $routes->group('', function($routes) {
 // admin side routes
 $routes->group('', function($routes){
     $routes->get('/admin', 'AdminDashboard::index');
-    $routes->get('/admin/products', 'AdminDashboard::products');
     $routes->get('/admin/transactions', 'AdminDashboard::transactions');
-    $routes->get('/admin/inventory', 'AdminDashboard::inventory');
-    $routes->get('/admin/manageUsers', 'AdminDashboard::manageUsers');
+    $routes->get('/admin/products', 'AdminDashboard::products');
+    $routes->get('/admin/manageUsers', 'AdminDashboard::userManagement');
+    $routes->get('/admin/adminRegister', 'AdminDashboard::register');
+    $routes->post('/admin/addNewAdmin', 'AdminDashboard::addNewAdmin');
+
 });
 

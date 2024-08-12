@@ -23,7 +23,7 @@
       <!-- logo -->
         <div class="brand-logo d-flex align-items-center justify-content-between">
           <a href="index.php <?= base_url('/admin') ?>" class="text-nowrap logo-img">
-            <img src="../assets/images/logos/logo.png" width="150" alt="" />
+            <img src="<?= base_url('assets/images/logo.png') ?>" width="150" alt="" />
           </a>
         </div>
 
@@ -48,14 +48,28 @@
               </a>
             </li>
 
-            <!-- space between dashboard and the bottom menus -->
-            <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                    <!-- space between dashboard and the bottom menus -->
+                    <li class="nav-small-cap">
+                      <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                    </li>
+
+
+
+            <!-- TRANSACTIONS  -->
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="<?= base_url("/admin/transactions") ?>" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-store"></i>
+                </span>
+                <span class="hide-menu">Transactions</span>
+              </a>
             </li>
+
+
 
             <!-- PRODUCT  -->
             <li class="sidebar-item">
-              <a class="sidebar-link" href="<?= base_url("/admin") ?>" aria-expanded="false">
+              <a class="sidebar-link" href="<?= base_url("/admin/products") ?>" aria-expanded="false">
                 <span>
                   <i class="fa-solid fa-store"></i>
                 </span>
@@ -63,23 +77,14 @@
               </a>
             </li>
 
-            <!-- SAVE PHOTO -->
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="ui-savep.php" aria-expanded="false">
-                <span>
-                  <i class="fa-solid fa-image"></i>
-                </span>
-                <span class="hide-menu">Save Photo</span>
-              </a>
-            </li>
 
-            <!-- CUSTOMIZE -->
+            <!-- MANAGE USERS -->
             <li class="sidebar-item">
-              <a class="sidebar-link" href="<?= base_url("/admin") ?>" aria-expanded="false">
+              <a class="sidebar-link" href="<?= base_url("/admin/manageUsers") ?>" aria-expanded="false">
                 <span>
                   <i class="ti ti-cards"></i>
                 </span>
-                <span class="hide-menu">Customize</span>
+                <span class="hide-menu">Users</span>
               </a>
             </li>
 
@@ -102,11 +107,11 @@
 
             <!-- Register new admin button -->
             <li class="sidebar-item">
-              <a class="sidebar-link" href="<?= base_url("/authentication-register") ?>" aria-expanded="false">
+              <a class="sidebar-link" href="<?= base_url("/admin/adminRegister") ?>" aria-expanded="false">
                 <span>
                   <i class="ti ti-user-plus"></i>
                 </span>
-                <span class="hide-menu">Register</span>
+                <span class="hide-menu">Create new admin</span>
               </a>
             </li>
           </ul>

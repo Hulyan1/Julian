@@ -23,12 +23,13 @@ class Signup_Login extends BaseController
 // ------------------------------------------------------------------------------------------------------------ //
 
 
-    // signup user only
+    // signup / create admin 
     public function signup() {
 
     }
 
-    // login user 
+
+    // signup / create user 
     public function registerUserAccount()
     {
 
@@ -36,8 +37,8 @@ class Signup_Login extends BaseController
 
 
 
-    // login as admin 
-    public function loginAdmin()
+    // login as admin or user
+    public function loginAdminOrUser()
     {
         $usernameOrEmail = $_POST['username'];
         $password = $_POST['pass'];
@@ -90,7 +91,7 @@ class Signup_Login extends BaseController
     }
 
 
-    
+
     // Log out method
     public function logout()
     {

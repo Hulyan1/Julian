@@ -17,7 +17,7 @@ $routes->group('', function($routes){
     $routes->get('/account', 'Home::account');
 
     // login account for admin or user routes
-    $routes->post('/account/accountLogin', 'Signup_Login::loginAdmin');
+    $routes->post('/account/accountLogin', 'Signup_Login::loginAdminOrUser');
     $routes->post('/account/user', 'Signup_Login::registerUserAccount');
 });
 

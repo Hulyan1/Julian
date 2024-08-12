@@ -50,6 +50,7 @@ CREATE TABLE products (
   price DECIMAL(10, 2) NOT NULL,
   quantity INT NOT NULL,
   cat_id INT,
+  image VARCHAR(255), -- field for storing image path or URL
   added_at DATETIME DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (cat_id) REFERENCES category(cat_id)
 );

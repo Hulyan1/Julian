@@ -35,29 +35,99 @@ class Home extends BaseController
 
 
 
-
     //return library file in views
     public function gearLibrary(){
-        return view('library');
+        // if login in to admin account session
+        if ($this->session->get('admin_logged_in')) {
+            return view('AdminSide/index');
+        } else {
+            return view('library');
+        }
+
+        // if login in to user account session
+        if ($this->session->get('user_logged_in')){
+            return view('');
+        } else {
+            return view('library');
+        }
     }
+
+
 
     //return community(comm) file in views
     public function community(){
-        return view('comm');
+        // if login in to admin account session
+        if ($this->session->get('admin_logged_in')) {
+            return view('AdminSide/index');
+        } else {
+            return view('comm');
+        }
+
+        // if login in to user account session
+        if ($this->session->get('user_logged_in')){
+            return view('');
+        } else {
+            return view('comm');
+        }
     }
+
+
 
     //return customize file in views
     public function customize(){
-        return view('customize');
+        // if login in to admin account session
+        if ($this->session->get('admin_logged_in')) {
+            return view('AdminSide/index');
+        } else {
+            return view('customize');
+        }
+
+        // if login in to user account session
+        if ($this->session->get('user_logged_in')){
+            return view('');
+        } else {
+            return view('customize');
+        }
     }
+
+
 
     //return shopp file in views
     public function shop(){
-        return view('shopp');
+                // if login in to admin account session
+        if ($this->session->get('admin_logged_in')) {
+            return view('AdminSide/index');
+        } else {
+            return view('shopp');
+        }
+
+        // if login in to user account session
+        if ($this->session->get('user_logged_in')){
+            return view('');
+        } else {
+            return view('shopp');
+        }
     }
+
+
 
     //return signup_login file in views
     public function account() {
-        return view('signup_login');
+                // if login in to admin account session
+        if ($this->session->get('admin_logged_in')) {
+            return view('AdminSide/index');
+        } else {
+            return view('signup_login');
+        }
+
+        // if login in to user account session
+        if ($this->session->get('user_logged_in')){
+            return view('');
+        } else {
+            return view('signup_login');
+        }
     }
+
+
+    
 }

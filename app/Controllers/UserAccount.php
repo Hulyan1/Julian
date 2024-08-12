@@ -17,34 +17,51 @@ class UserAccount extends BaseController
 
 
 
-    public function home() {    
-        return view('UserSide/userHome');
+    public function home() {  
+        if($this->session->get('user_logged_in')) {
+            return view('UserSide/userHome');
+        }else {
+            return view('home');
+        }  
     }
 
     public function gearLibrary() {
-        return view("UserSide/userLibrary");
+        if($this->session->get('user_logged_in')) {
+            return view("UserSide/userLibrary");
+        }else {
+            return view('home');
+        }
     }
 
     public function community() {
-        return view("UserSide/userComm");
+        if($this->session->get('user_logged_in')) {
+            return view("UserSide/userComm");
+        }else {
+            return view('home');
+        }
     }
 
     public function customize() {
-        return view("UserSide/userCustomize");
+        if($this->session->get('user_logged_in')) {
+            return view("UserSide/userCustomize");
+        }else {
+            return view('home');
+        }
     }
 
     public function shop() {
-        return view("UserSide/userShopp");
+        if($this->session->get('user_logged_in')) {
+            return view("UserSide/userShopp");
+        }else {
+            return view('home');
+        }
     }
 
     public function accountSettings() {
-        return view("UserSide/userAccountSettings");
-    }
-
-
-    public function logout()
-    {
-        $this->session->destroy();
-        return redirect()->to('/');
+        if($this->session->get('user_logged_in')) {
+            return view("UserSide/userAccountSettings");
+        }else {
+            return view('home');
+        }
     }
 }

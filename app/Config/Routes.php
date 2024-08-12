@@ -7,7 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 
 
-// Home routes - after the "localhost/project_name/public/" 
+// Home routes - after the "localhost/project_name/public/" NOTE: without user account signed in
 $routes->group('', function($routes){
     $routes->get('/', 'Home::home');
     $routes->get('/library', 'Home::gearLibrary');  
@@ -28,4 +28,11 @@ $routes->group('/shop', function($routes) {
 });
 
 
-
+$routes->group('', function($routes) {
+    $routes->get('/', "UserAccount::home");
+    $routes->get('/library', 'UserAccount::gearLibrary');  
+    $routes->get('/community', 'UserAccount::community');
+    $routes->get('/customize', 'UserAccount::customize');
+    $routes->get('/shop', 'UserAccount::shop');
+    $routes->get('/account', 'UserAccount::accountSettings');
+});

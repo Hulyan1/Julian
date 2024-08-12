@@ -19,34 +19,34 @@
 
         <nav>   
                 <div class="logo">
-                    <a href="<?= base_url("/") ?>">
+                    <a href="<?= base_url("/Home") ?>">
                         <img src=" <?= base_url("assets/img/301117165_464244785717653_8213835756832948193_n-removebg-preview.png") ?>" alt="">
                     </a>
                 </div>
 
                 <ul class="links">
                     <li>
-                        <a href="<?= base_url("/") ?>">Home</a>
+                        <a href="<?= base_url("/Home") ?>">Home</a>
                     </li>
 
                     <li>
-                        <a href="<?= base_url("/library") ?>">Gear Library</a>    
+                        <a href="<?= base_url("/Library") ?>">Gear Library</a>    
                     </li>
 
                     <li>
-                        <a href="<?= base_url("/community") ?>">IEM Community</a>            
+                        <a href="<?= base_url("/Community") ?>">IEM Community</a>            
                     </li>
 
                     <li>
-                        <a href="<?= base_url("/customize") ?>">Customize</a> 
+                        <a href="<?= base_url("/Customize") ?>">Customize</a> 
                     </li>
 
                     <li>
-                        <a class="shop" href="<?= base_url("/shop") ?>">Shop</a> 
+                        <a class="shop" href="<?= base_url("/Shop") ?>">Shop</a> 
                     </li>
 
                     <div class="logn">
-                        <a href="<?= base_url("/account") ?>"><i class="fa-solid fa-user-plus"></i></a>
+                        <a href="<?= base_url("/AccountSettings") ?>"><i class="fa-solid fa-user-plus"></i></a>
                     </div>
                 </ul>
             </nav>

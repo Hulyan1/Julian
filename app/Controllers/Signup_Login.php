@@ -104,7 +104,7 @@ class Signup_Login extends BaseController
                 ];
                 $this->session->set($data);
 
-                return view('UserSide/userprofile');
+                return view('UserSide/userAccountSettings');
             }
         }
 

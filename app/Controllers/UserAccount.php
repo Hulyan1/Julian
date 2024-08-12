@@ -3,7 +3,7 @@
 namespace App\Controllers;
 use App\Models\userAccounts;
 
-class Signup_Login extends BaseController 
+class UserAccount extends BaseController 
 {
     // session initialize
     protected $session;
@@ -17,27 +17,27 @@ class Signup_Login extends BaseController
 
 
 
-    public function home() {
-        return view("UserSide\userHome");
+    public function home() {    
+        return view('UserSide/userHome');
     }
 
     public function gearLibrary() {
-        return view("UserSide\userLibrary");
+        return view("UserSide/userLibrary");
     }
 
     public function community() {
-        return view("UserSide\userComm");
+        return view("UserSide/userComm");
     }
 
     public function customize() {
-        return view("UserSide\userCustomize");
+        return view("UserSide/userCustomize");
     }
 
     public function shop() {
-        return view("UserSide\userShopp");
+        return view("UserSide/userShopp");
     }
 
     public function accountSettings() {
-        return view("UserSide\userAccountSettings");
+        return view("UserSide/userAccountSettings");
     }
 }

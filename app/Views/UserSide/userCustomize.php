@@ -22,7 +22,7 @@
 <body>
 
 <header>
-    <a href="<?= base_url('/') ?>">back</a>
+    <a href="<?= base_url('/Home') ?>">back</a>
 </header>
 </body>
 </html>

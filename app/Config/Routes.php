@@ -29,10 +29,10 @@ $routes->group('/shop', function($routes) {
 
 
 $routes->group('', function($routes) {
-    $routes->get('/', "UserAccount::home");
-    $routes->get('/library', 'UserAccount::gearLibrary');  
-    $routes->get('/community', 'UserAccount::community');
-    $routes->get('/customize', 'UserAccount::customize');
-    $routes->get('/shop', 'UserAccount::shop');
-    $routes->get('/account', 'UserAccount::accountSettings');
+    $routes->get('/Home', "UserAccount::home");
+    $routes->get('/Library', 'UserAccount::gearLibrary');  
+    $routes->get('/Community', 'UserAccount::community');
+    $routes->get('/Customize', 'UserAccount::customize');
+    $routes->get('/Shop', 'UserAccount::shop');
+    $routes->get('/AccountSettings', 'UserAccount::accountSettings');
 });

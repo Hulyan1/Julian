@@ -21,6 +21,7 @@ $routes->group('', function($routes){
     $routes->post('/account/user', 'Signup_Login::registerUserAccount');
 });
 
+
 // Shop routes - after the "localhost/project_name/public/shop/"
 $routes->group('/shop', function($routes) {
     $routes->get('/', 'Shop::cart');
@@ -36,3 +37,14 @@ $routes->group('', function($routes) {
     $routes->get('/Shop', 'UserAccount::shop');
     $routes->get('/AccountSettings', 'UserAccount::accountSettings');
 });
+
+
+// admin side routes
+$routes->group('', function($routes){
+    $routes->get('/admin', 'AdminDashboard::index');
+    $routes->get('/admin/products', 'AdminDashboard::products');
+    $routes->get('/admin/transactions', 'AdminDashboard::transactions');
+    $routes->get('/admin/inventory', 'AdminDashboard::inventory');
+    $routes->get('/admin/manageUsers', 'AdminDashboard::manageUsers');
+});
+

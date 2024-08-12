@@ -22,7 +22,7 @@
 
       <!-- logo -->
         <div class="brand-logo d-flex align-items-center justify-content-between">
-          <a href="index.php <?= base_url('') ?>" class="text-nowrap logo-img">
+          <a href="index.php <?= base_url('/admin') ?>" class="text-nowrap logo-img">
             <img src="../assets/images/logos/logo.png" width="150" alt="" />
           </a>
         </div>
@@ -40,7 +40,7 @@
 
             <!-- DASHBOARD -->
             <li class="sidebar-item">
-              <a class="sidebar-link" href="" aria-expanded="false">
+              <a class="sidebar-link" href="<?= base_url("/admin") ?>" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
@@ -55,7 +55,7 @@
 
             <!-- PRODUCT  -->
             <li class="sidebar-item">
-              <a class="sidebar-link" href="ui-product.php" aria-expanded="false">
+              <a class="sidebar-link" href="<?= base_url("/admin") ?>" aria-expanded="false">
                 <span>
                   <i class="fa-solid fa-store"></i>
                 </span>
@@ -75,7 +75,7 @@
 
             <!-- CUSTOMIZE -->
             <li class="sidebar-item">
-              <a class="sidebar-link" href="ui-customize.php" aria-expanded="false">
+              <a class="sidebar-link" href="<?= base_url("/admin") ?>" aria-expanded="false">
                 <span>
                   <i class="ti ti-cards"></i>
                 </span>
@@ -102,7 +102,7 @@
 
             <!-- Register new admin button -->
             <li class="sidebar-item">
-              <a class="sidebar-link" href="authentication-register.php" aria-expanded="false">
+              <a class="sidebar-link" href="<?= base_url("/authentication-register") ?>" aria-expanded="false">
                 <span>
                   <i class="ti ti-user-plus"></i>
                 </span>

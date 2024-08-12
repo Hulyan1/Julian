@@ -32,7 +32,23 @@ class Signup_Login extends BaseController
     // signup / create user 
     public function registerUserAccount()
     {
+        $model = new UserAccounts();
 
+        $data = [
+            'firstname' => $this->request->getPost('fname'),
+            'lastname' => $this->request->getPost('lname'),
+            'email' => $this->request->getPost('email'),
+            'phone_num' => $this->request->getPost('pnum'),
+            'password' => password_hash($this->request->getPost('pass'), PASSWORD_DEFAULT),
+        ];
+
+        if ($this->request->getPost('pass') !== $this->request->getPost('cpass')) {
+            return redirect()->back();
+        }
+
+        $model->save($data);
+
+        return redirect()->to('/account'); //->with('success', 'Account successfully created. Please login.');
     }
 
 
@@ -95,10 +111,7 @@ class Signup_Login extends BaseController
     // Log out method
     public function logout()
     {
-        // Destroy the session
         $this->session->destroy();
-        
-        // Redirect to the login page or home page
         return redirect()->to('/');
     }
 }

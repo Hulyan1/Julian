@@ -26,7 +26,7 @@
 
 <!-- this is sign up form -->
             <div class="signup">
-                <form action="" method="post">
+                <form action="<?= base_url("/account/user") ?>" method="post">
                     <label for="chk" aria-hidden="true">Sign up</label>
                     <h5><a href="<?= base_url('/') ?>">Home</a></h5>
                     <div class="input-block">
@@ -39,11 +39,12 @@
                     </div>
                     <div class="input-block">
                         <input type="password" name="pass" id="pass" placeholder="Enter your Password" required>
-                        <input type="password" name="cpass" id="cpass" placeholder="Confirm your Passsword" required>
+                        <input type="password" name="cpass" id="cpass" placeholder="Confirm your Password" required>
                     </div>
                     <button type="submit" value="register" name="submit">Sign up</button>
-                </form>
+                </form>             
             </div>
+            
 
 <!-- this is login form for admin? -->
             <div class="login">

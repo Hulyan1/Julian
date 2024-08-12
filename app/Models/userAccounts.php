@@ -5,12 +5,14 @@ use CodeIgniter\model;
 
 class userAccounts extends model 
 {
-    protected $table = 'user_accounts';
-    protected $primaryKey = 'user_account_id';
+    protected $table = 'user_accounts'; 
+    protected $primaryKey = 'user_accounts_id'; 
 
-    protected $fields = [
-        'username',
+    protected $allowedFields = [
+        'firstname',
+        'lastname',
         'email',
+        'phone_num',
         'password'
     ];
 }

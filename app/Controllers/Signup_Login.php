@@ -10,13 +10,16 @@ use CodeIgniter\Controller\Home;
 class Signup_Login extends BaseController 
 {
 
+    // session initialize
     protected $session;
 
-    public function __construct()
-    {
+    public function __construct() {
         // Initialize the session service
         $this->session = \Config\Services::session();
     }
+
+
+// ------------------------------------------------------------------------------------------------------------ //
 
 
     // signup user only

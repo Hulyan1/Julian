@@ -24,16 +24,6 @@ create table user_accounts (
     password varchar(255) not null
 );
 
-    
--- creates large file storage table
-create table products (
-    product_id int auto_increment primary key,
-    product varchar(255) not null,
-    name varchar(255) not null,
-    price decimal(10,2) not null,
-    category varchar(255) not null
-);
-
 
 
 -- other databases
@@ -62,4 +52,12 @@ CREATE TABLE comments (
   comments LONGTEXT,
   datePosted DATETIME DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (pro_id) REFERENCES products(pro_id)
+);
+
+
+
+-- orders table
+CREATE TABLE orders (
+  order_id INT AUTO_INCREMENT PRIMARY KEY,
+
 );

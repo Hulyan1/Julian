@@ -7,6 +7,7 @@
   <title>INM Admin</title>
   <link rel="shortcut icon" type="image/png" href=" <?= base_url('AdminSideAssets/images/logos/logo.png') ?>" />
   <link rel="stylesheet" href="<?= base_url('AdminSideAssets/css/styles.min.css') ?>"/>
+  <link rel="stylesheet" href="<?= base_url('AdminSideAssets/css/table.css') ?>" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 
@@ -132,7 +133,45 @@
       <!--  Header End -->
 
       <div class="container-fluid">
-  
+      <div class="card">
+            <div class="card-body">
+              <div class="card-title">
+                <h5 class="card-title fw-semibold mb-4">Transaction</h5>
+              </div>
+              
+              <div class="card">
+                <div class="card-body">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Product</th>
+                      <th>Quantity</th>
+                      <th>Date</th>
+                      <th>Payment Method</th>
+                      <th>Amount</th>
+                     
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <td>1</td>
+                    <td>Julian Barrientos</td>
+                    <td>julian@gmail.com</td>
+                    <td>Crystal Clear</td>
+                    <td>2</td>
+                    <td>July 1, 2020</td>
+                    <td>GCASH</td>
+                    <td>10,100</td>
+                    
+                  </tbody>
+                </table>
+                </div>
+              </div>
+
+            </div>
+          </div>
       
 
 
